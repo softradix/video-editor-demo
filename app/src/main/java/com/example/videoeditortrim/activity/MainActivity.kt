@@ -50,10 +50,10 @@ class MainActivity : AppCompatActivity() {
                     Manifest.permission.WRITE_EXTERNAL_STORAGE
                 ) == PackageManager.PERMISSION_GRANTED
             ) {
-                Toast.makeText(
+                /*Toast.makeText(
                     this@MainActivity, "You have already granted this permission! Please Click on get Videos",
                     Toast.LENGTH_LONG
-                ).show()
+                ).show()*/
                 binding.progressBar.visibility = View.VISIBLE
                 binding.pickVideo.visibility = View.GONE
                 Database.loadAllVideos(applicationContext, object : MyCompleteListener {

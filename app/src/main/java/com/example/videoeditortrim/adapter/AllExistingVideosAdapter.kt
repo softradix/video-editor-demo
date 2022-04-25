@@ -10,11 +10,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.videoeditortrim.R
-import com.example.videoeditortrim.activity.TrimVideoActivity
+import com.example.videoeditortrim.activity.KVideoEditorDemoActivity
 import com.example.videoeditortrim.util.Constants
 import com.example.videoeditortrim.util.Database.allVideoList
 
@@ -44,26 +43,31 @@ class AllExistingVideosAdapter internal constructor(
                 min
             ) + ":" + String.format("%02d", sec)
             holder.duration.text = time
-        }catch(e: Exception){
-            Log.e("TAG", "onBindViewHolder: ${e.message}", )
+        } catch (e: Exception) {
+            Log.e("TAG", "onBindViewHolder: ${e.message}")
 
-        }finally {
-            Glide.with(mContext).load(videoUri).thumbnail().into(holder.thumbnail)
-            val mediaPlayer: MediaPlayer = MediaPlayer.create(holder.thumbnail.context, videoUri)
-            val duration: Int = mediaPlayer.duration / 1000
-            val hr = duration / 3600
-            val rem = duration % 3600
-            val min = rem / 60
-            val sec = rem % 60
-            val time = String.format("%02d", hr) + ":" + String.format(
-                "%02d",
-                min
-            ) + ":" + String.format("%02d", sec)
-            holder.duration.text = time
         }
+       /* finally {
+
+                Glide.with(mContext).load(videoUri).thumbnail().into(holder.thumbnail)
+                val mediaPlayer: MediaPlayer = MediaPlayer.create(holder.thumbnail.context, videoUri)
+                val duration: Int = mediaPlayer.duration / 1000
+                val hr = duration / 3600
+                val rem = duration % 3600
+                val min = rem / 60
+                val sec = rem % 60
+                val time = String.format("%02d", hr) + ":" + String.format(
+                    "%02d",
+                    min
+                ) + ":" + String.format("%02d", sec)
+                holder.duration.text = time
+            }
+*/
+
 
         holder.thumbnail.setOnClickListener {
-            val intent = Intent(holder.thumbnail.context, TrimVideoActivity::class.java)
+//            val intent = Intent(holder.thumbnail.context, TrimVideoActivity::class.java)
+            val intent = Intent(holder.thumbnail.context, KVideoEditorDemoActivity::class.java)
             intent.putExtra(Constants.VideoUri, videoUri.toString())
             holder.thumbnail.context.startActivity(intent)
         }

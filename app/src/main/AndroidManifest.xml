@@ -16,12 +16,15 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:requestRawExternalStorageAccess="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VideoEditorTrim"
-        android:requestLegacyExternalStorage="true"
-        android:requestRawExternalStorageAccess="true"
         tools:ignore="AllowBackup,UnusedAttribute">
+        <activity
+            android:name=".activity.KVideoEditorDemoActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">
