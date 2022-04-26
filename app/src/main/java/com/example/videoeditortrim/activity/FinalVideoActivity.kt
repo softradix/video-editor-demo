@@ -19,7 +19,6 @@ class FinalVideoActivity : AppCompatActivity() {
         binding = ActivityFinaVideoBinding.inflate(layoutInflater)
         binding.root.apply {
             setContentView(this)
-
         }
         binding.cancelButton.setOnClickListener {
             startActivity(Intent(this, LoadAllExistingVideos::class.java))

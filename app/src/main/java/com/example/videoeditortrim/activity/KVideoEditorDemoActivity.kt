@@ -39,7 +39,6 @@ class KVideoEditorDemoActivity : AppCompatActivity() {
         val path: Uri = Uri.parse(extraIntent.getStringExtra(Constants.VideoUri).toString())
 
         openEditor(path)
-
     }
 
     private fun openEditor(inputSource: Uri?) {
@@ -51,7 +50,6 @@ class KVideoEditorDemoActivity : AppCompatActivity() {
         VideoEditorBuilder(this)
             .setSettingsList(settingsList)
             .startActivityForResult(this, VIDEO_EDITOR_SDK_RESULT)
-
         settingsList.release()
     }
 

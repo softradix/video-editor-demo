@@ -8,8 +8,8 @@ android {
     compileSdk 31
 
     defaultConfig {
-//        com.example.videoeditortrim
-        applicationId "com.photoeditorsdk.android.app"
+//        com.example.videoeditortrim // com.photoeditorsdk.android.app
+        applicationId "com.example.videoeditortrim"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -41,7 +41,8 @@ android {
 imglyConfig {
     vesdk {
         enabled true
-        licensePath 'vesdk_android_license'
+//        licensePath 'vesdk_android_license'
+        licensePath null
     }
 
     // Define the modules you are need

@@ -47,22 +47,22 @@ class AllExistingVideosAdapter internal constructor(
             Log.e("TAG", "onBindViewHolder: ${e.message}")
 
         }
-       /* finally {
+        /* finally {
 
-                Glide.with(mContext).load(videoUri).thumbnail().into(holder.thumbnail)
-                val mediaPlayer: MediaPlayer = MediaPlayer.create(holder.thumbnail.context, videoUri)
-                val duration: Int = mediaPlayer.duration / 1000
-                val hr = duration / 3600
-                val rem = duration % 3600
-                val min = rem / 60
-                val sec = rem % 60
-                val time = String.format("%02d", hr) + ":" + String.format(
-                    "%02d",
-                    min
-                ) + ":" + String.format("%02d", sec)
-                holder.duration.text = time
-            }
-*/
+                 Glide.with(mContext).load(videoUri).thumbnail().into(holder.thumbnail)
+                 val mediaPlayer: MediaPlayer = MediaPlayer.create(holder.thumbnail.context, videoUri)
+                 val duration: Int = mediaPlayer.duration / 1000
+                 val hr = duration / 3600
+                 val rem = duration % 3600
+                 val min = rem / 60
+                 val sec = rem % 60
+                 val time = String.format("%02d", hr) + ":" + String.format(
+                     "%02d",
+                     min
+                 ) + ":" + String.format("%02d", sec)
+                 holder.duration.text = time
+             }
+ */
 
 
         holder.thumbnail.setOnClickListener {
